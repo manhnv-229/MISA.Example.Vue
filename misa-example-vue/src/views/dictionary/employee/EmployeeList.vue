@@ -148,7 +148,12 @@
         </tr>
       </thead>
       <tbody>
-        <tr class="el-table__row" v-for="emp in employees" :key="emp.Id" @click="selectedEmployee=emp">
+        <tr
+          class="el-table__row"
+          v-for="emp in employees"
+          :key="emp.Id"
+          @click="selectedEmployee = emp"
+        >
           <td rowspan="1" colspan="1" class="el-table_1_column_1">
             <div class="cell">2016-05-03</div>
           </td>
@@ -253,6 +258,8 @@
 </style>
 
 <script>
+import * as axios from "axios";
+
 export default {
   name: "Employees",
   data() {
@@ -277,5 +284,9 @@ export default {
       ],
     };
   },
+  async created() {
+  const response = await axios.get("http://api.manhnv.net/api/employees");
+  this.employees = response;
+},
 };
 </script>
