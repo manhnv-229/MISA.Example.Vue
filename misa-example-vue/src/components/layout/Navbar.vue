@@ -19,14 +19,18 @@
                 <div class="nav-item-icon nav-item-dashboard"></div>
                 <div class="nav-item-text">Mua hàng</div>
             </a>
-            <a class="nav-item" :href="customer">
+            <!-- <a class="nav-item" :href="customer">
                 <div class="nav-item-icon nav-item-dic"></div>
                 <div class="nav-item-text">Danh mục khách hàng</div>
-            </a>
-            <a class="nav-item" :href="employee">
+            </a> -->
+            <router-link class="nav-item" to="/dictionary/customer">
+                <div class="nav-item-icon nav-item-dic"></div>
+                <div class="nav-item-text">Danh mục khách hàng</div>
+            </router-link>
+             <router-link class="nav-item" to="/dictionary/employee">
                 <div class="nav-item-icon nav-item-dic"></div>
                 <div class="nav-item-text">Danh mục nhân viên</div>
-            </a>
+            </router-link>
             <a class="nav-item">
                 <div class="nav-item-icon nav-item-setting"></div>
                 <div class="nav-item-text">Thiết lập hệ thống</div>
@@ -42,7 +46,7 @@ export default {
     return {
       customer: '/dictionary/customer',
       employee: '/dictionary/employee'
-    }
+    };
   }
-}
+};
 </script>

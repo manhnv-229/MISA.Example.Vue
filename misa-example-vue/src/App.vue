@@ -35,6 +35,9 @@ export default {
 }
 
 #nav a.router-link-exact-active {
-  color: #42b983;
+  color: #019160;
+}
+.navbar .navbar-content .nav-item.router-link-exact-active {
+    background-color: #e5e5e5;
 }
 </style>
