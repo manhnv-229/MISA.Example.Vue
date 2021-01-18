@@ -285,8 +285,8 @@ export default {
     };
   },
   async created() {
-  const response = await axios.get("http://api.manhnv.net/api/employees");
-  this.employees = response;
-},
+    const response = await axios.get("http://api.manhnv.net/api/employees");
+    this.employees = response;
+  },
 };
 </script>
