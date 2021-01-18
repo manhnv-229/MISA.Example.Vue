@@ -92,7 +92,8 @@ module.exports = {
     'comma-dangle': 'off',
     'semi': 'off',
     'eol-last':'off',
-    'vue/html-indent':'off'
+    'vue/html-indent':'off',
+    'vue/no-multiple-template-root':'off'
   },
 
   globals: {
