@@ -1,8 +1,12 @@
 <template>
   <div id="app">
-    <Navbar />
-    <Header />
-    <Content />
+    <v-app>
+      <v-main>
+          <Navbar />
+          <Header />
+          <Content />
+      </v-main>
+    </v-app>
   </div>
   <!-- <v-app>
     <v-app-bar app color="primary" dark>
@@ -73,7 +77,7 @@ export default {
 
 #nav a {
   font-weight: bold;
-  color: #2c3e50;
+  color: #2c3e50 !important;
 }
 
 #nav a.router-link-exact-active {
