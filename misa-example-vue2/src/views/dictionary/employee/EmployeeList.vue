@@ -177,7 +177,7 @@
             class="el-table__row"
             v-for="employee in employees"
             :key="employee.EmployeeId"
-            @click="rowOnClick(employee)"
+            @dblclick="rowOnClick(employee)"
           >
             <td>
               <div class="cell">{{ employee.EmployeeCode }}</div>
