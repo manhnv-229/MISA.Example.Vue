@@ -11,7 +11,7 @@
           <div class="m-btn-icon icon-add"></div>
           <div class="btn-text">Thêm nhân viên</div>
         </button>
-        <Details/>
+        <Details @closePopup="closePopup" :isHide="isHideParent" />
       </div>
     </div>
     <div class="filter-bar">
@@ -242,14 +242,18 @@ export default {
   },
   methods: {
     btnAddOnClick() {
-      alert(1);
+      this.isHideParent = false;
     },
     rowOnClick(employee){
       alert(employee.FullName);
+    },
+    closePopup(value) {
+      this.isHideParent = value;
     }
   },
   data() {
     return {
+      isHideParent: true,
       selectedEmployee: {
         EmployeeId: 1,
         FullName: "Nguyễn Văn Mạnh",
@@ -371,9 +375,15 @@ export default {
     };
   },
   async created() {
+
     const response = await axios.get("http://api.manhnv.net/api/employees");
+
+    console.log(response.data[0]);
+
     this.employees = response.data;
   },
+
+  
 };
 </script>
 
