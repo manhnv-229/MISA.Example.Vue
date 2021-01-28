@@ -11,7 +11,6 @@
           <div class="m-btn-icon icon-add"></div>
           <div class="btn-text">Thêm nhân viên</div>
         </button>
-        <Details @closePopup="closePopup" :isHide="isHideParent" />
       </div>
     </div>
     <div class="filter-bar">
@@ -230,11 +229,12 @@
       <div class="paging-record-option"><b>10</b> nhân viên/trang</div>
     </div>
     
+     <Details @closePopup="closePopup" :isHide="isHideParent" />
   </div>
 </template>
 <script>
 import * as axios from "axios";
-import Details from "./EmployeeProfileDetail";
+import Details from "./EmployeeListDetail.vue";
 export default {
   name: "Employees",
   components: {
